@@ -1,0 +1,295 @@
+
+## 🐧 **Linux Notes for Quick Revision**
+
+### ✨ **1. What is Linux?**
+
+🔹 **Definition:**
+Linux is an open-source, Unix-like operating system based on the Linux kernel. It is widely used for servers, desktops, and embedded systems.
+
+🔹 **Key Features:**
+
+* Multi-user
+* Multitasking
+* Open-source
+* Secure and stable
+
+💡 **Interview Questions:**
+
+* What is Linux?
+* Name some distributions of Linux.
+* Is Linux a kernel or OS?
+
+---
+
+### ✨ **2. Linux Architecture**
+
+🔹 **Main Components:**
+
+1. **Kernel:** Core part; interacts with hardware.
+2. **Shell:** Interface between user and kernel.
+3. **Utilities:** Basic tools and commands.
+4. **File System:** Organised structure to store files.
+
+💡 **Interview Questions:**
+
+* Explain Linux architecture.
+* What is the role of the kernel?
+
+---
+
+### ✨ **3. Basic Linux Commands**
+
+| Command | Description                      |
+| ------- | -------------------------------- |
+| `pwd`   | Print working directory          |
+| `ls`    | List files and directories       |
+| `cd`    | Change directory                 |
+| `mkdir` | Create directory                 |
+| `rmdir` | Remove empty directory           |
+| `rm`    | Remove files/directories         |
+| `cp`    | Copy files/directories           |
+| `mv`    | Move or rename files/directories |
+| `touch` | Create empty file                |
+| `cat`   | View file content                |
+
+💡 **Interview Questions:**
+
+* How to create a file in Linux?
+* Command to view hidden files?
+
+---
+
+### ✨ **4. How Linux works with Editor and Files**
+
+🔹 **Popular Editors:**
+
+* **vi/vim** (default powerful editor)
+* **nano** (simple editor)
+* **gedit** (GUI editor)
+
+🔹 **Example with vi:**
+
+```bash
+vi filename      # open file
+i                # insert mode
+Esc + :wq        # save and quit
+```
+
+💡 **Interview Questions:**
+
+* Difference between vi and nano editor?
+* How to save and exit in vi editor?
+
+---
+
+### ✨ **5. File System**
+
+🔹 **Definition:**
+Organised hierarchy to manage files.
+
+🔹 **Important directories:**
+
+* `/`: Root directory
+* `/home`: User home directories
+* `/bin`: Essential commands
+* `/etc`: Configuration files
+* `/tmp`: Temporary files
+* `/dev`: Device files
+
+💡 **Interview Questions:**
+
+* What is `/etc` used for?
+* Explain Linux file system hierarchy.
+
+---
+
+### ✨ **6. Working with Files and Directories**
+
+🔹 **Commands Examples:**
+
+```bash
+cp file1 file2      # copy file1 to file2
+mv file1 dir1/      # move file1 to dir1
+rm file1            # delete file1
+rmdir dir1          # delete empty dir1
+rm -r dir1          # delete dir1 and contents
+```
+
+💡 **Interview Questions:**
+
+* How to delete a directory with files inside?
+* Command to move file from one dir to another?
+
+---
+
+### ✨ **7. Redirectors**
+
+🔹 **Types:**
+
+* **Output redirection `>`** : overwrites file
+* **Append redirection `>>`** : adds to file
+* **Input redirection `<`** : takes input from file
+* **Piping `|`** : output of one command as input to another
+
+🔹 **Example:**
+
+```bash
+ls > filelist.txt   # saves output to filelist.txt
+cat file1 | grep "word"
+```
+
+💡 **Interview Questions:**
+
+* Difference between `>` and `>>`?
+* What does pipe do in Linux?
+
+---
+
+### ✨ **8. User Administration**
+
+🔹 **Important commands:**
+
+* `useradd username` : Add user
+* `passwd username` : Set password
+* `usermod -aG group username` : Add user to group
+* `userdel username` : Delete user
+
+💡 **Interview Questions:**
+
+* How to add user in Linux?
+* Command to change user password?
+
+---
+
+### ✨ **9. Archiving**
+
+🔹 **Tools:**
+
+* **tar:** Archive files
+* **gzip:** Compress files
+* **gunzip:** Decompress files
+
+🔹 **Example:**
+
+```bash
+tar -cvf archive.tar dir1   # create archive
+tar -xvf archive.tar        # extract archive
+gzip file.txt               # compress file
+gunzip file.txt.gz          # decompress file
+```
+
+💡 **Interview Questions:**
+
+* Command to create a tar archive?
+* How to unzip a gzipped file?
+
+---
+
+### ✨ **10. Filters**
+
+🔹 **Common filter commands:**
+
+| Command | Description                    |
+| ------- | ------------------------------ |
+| `grep`  | Search pattern                 |
+| `sort`  | Sort lines                     |
+| `uniq`  | Remove duplicates              |
+| `wc`    | Count lines, words, characters |
+| `cut`   | Cut sections from lines        |
+| `tr`    | Translate characters           |
+
+💡 **Interview Questions:**
+
+* Use of `grep` command?
+* How to count number of lines in file?
+
+---
+
+### ✨ **11. Job Scheduling**
+
+🔹 **Tools:**
+
+* `cron` : Schedule recurring tasks
+* `at` : Schedule one-time task
+
+🔹 **crontab syntax:**
+
+```
+* * * * * command
+(min hr day month weekday)
+```
+
+🔹 **Example:**
+
+```bash
+crontab -e      # edit crontab
+at 10:00        # schedule task at 10 AM
+```
+
+💡 **Interview Questions:**
+
+* What is crontab?
+* Difference between cron and at?
+
+---
+
+### ✨ **12. Linux Package Management**
+
+🔹 **Commands:**
+
+* **Debian-based (Ubuntu):**
+
+  * `apt-get install package`
+  * `dpkg -i package.deb`
+
+* **RedHat-based (CentOS):**
+
+  * `yum install package`
+  * `rpm -ivh package.rpm`
+
+💡 **Interview Questions:**
+
+* Difference between rpm and yum?
+* Command to install package in Ubuntu?
+
+---
+
+### ✨ **13. Linux Networking**
+
+🔹 **Basic commands:**
+
+| Command    | Description        |
+| ---------- | ------------------ |
+| `ifconfig` | Show IP config     |
+| `ping`     | Check connectivity |
+| `netstat`  | Network status     |
+| `ssh`      | Remote login       |
+| `scp`      | Secure copy        |
+
+💡 **Interview Questions:**
+
+* How to check IP address in Linux?
+* Command to connect to remote server?
+
+---
+
+### ✨ **14. Process Management**
+
+🔹 **Commands:**
+
+| Command    | Description          |
+| ---------- | -------------------- |
+| `ps`       | View processes       |
+| `top`      | Dynamic process view |
+| `kill PID` | Kill process         |
+| `bg`       | Background job       |
+| `fg`       | Foreground job       |
+
+💡 **Interview Questions:**
+
+* Difference between ps and top?
+* How to kill a process?
+
+---
+
+ **End of Notes**
